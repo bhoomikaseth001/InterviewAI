@@ -1,0 +1,19 @@
+bhoomikaseth999_db_user
+
+YbW97qhoUFPLZauc
+
+mongodb+srv://bhoomika:Pinocchio@interview-ai-cluster.bwu5wcr.mongodb.net/interview-master
+
+Client Request
+      ↓
+app.js
+      ↓
+Middleware
+      ↓
+Routes
+      ↓
+Controllers
+      ↓
+Database
+      ↓
+Response
