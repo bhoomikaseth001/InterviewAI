@@ -6,7 +6,6 @@ mongodb+srv://bhoomika:Pinocchio@interview-ai-cluster.bwu5wcr.mongodb.net/interv
 
 
 FLOW OF REQUEST
-
 Client Request
       ↓
 app.js
