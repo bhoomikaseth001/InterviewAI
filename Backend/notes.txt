@@ -4,6 +4,9 @@ YbW97qhoUFPLZauc
 
 mongodb+srv://bhoomika:Pinocchio@interview-ai-cluster.bwu5wcr.mongodb.net/interview-master
 
+
+FLOW OF REQUEST
+
 Client Request
       ↓
 app.js

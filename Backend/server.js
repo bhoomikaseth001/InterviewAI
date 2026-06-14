@@ -9,3 +9,6 @@ connectToDB() //connect to the database before starting the server.....function 
 app.listen(3000,() => {
     console.log("Server is running on port 3000")
 })
+
+
+
