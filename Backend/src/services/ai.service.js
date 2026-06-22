@@ -86,7 +86,7 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
                         Job Description: ${jobDescription}`
 
     const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash",
+        model: "gemini-2.5-flash",
         contents: prompt,
         config: {
             responseMimeType: "application/json",
@@ -106,14 +106,18 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
 
 }
 
-
 async function generatePdfFromHtml(htmlContent) {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox']  // needed on Windows
+    })
     const page = await browser.newPage();
-    await page.setContent(htmlContent, { waitUntil: "networkidle0" })
+
+    // Change waitUntil from "networkidle0" to "domcontentloaded"
+    await page.setContent(htmlContent, { waitUntil: "domcontentloaded" })
 
     const pdfBuffer = await page.pdf({
-        format: "A4", margin: {
+        format: "A4",
+        margin: {
             top: "20mm",
             bottom: "20mm",
             left: "15mm",
@@ -122,10 +126,8 @@ async function generatePdfFromHtml(htmlContent) {
     })
 
     await browser.close()
-
     return pdfBuffer
 }
-
 async function generateResumePdf({ resume, selfDescription, jobDescription }) {
 
     const resumePdfSchema = z.object({
@@ -146,7 +148,7 @@ async function generateResumePdf({ resume, selfDescription, jobDescription }) {
             `
 
     const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash",
+        model: "gemini-2.5-flash",
         contents: prompt,
         config: {
             responseMimeType: "application/json",
