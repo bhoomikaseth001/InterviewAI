@@ -5,13 +5,16 @@ import './style.scss'
 
 import { AuthProvider } from './features/auth/auth.context'
 import { InterviewProvider } from './features/interview/interview.context'
+import { ThemeProvider } from './theme.context'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-      <InterviewProvider>
-        <App />
-      </InterviewProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <InterviewProvider>
+          <App />
+        </InterviewProvider>
+      </AuthProvider>
+    </ThemeProvider>
   </StrictMode>,
 )
