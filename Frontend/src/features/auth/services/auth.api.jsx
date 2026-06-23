@@ -2,7 +2,7 @@ import axios from "axios"
 
 //because this part was common in all the functions(leaving in 1st function and replacing in others for understanding)
 const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: import.meta.env.VITE_API_URL,
     withCredentials: true
 })
 
