@@ -110,7 +110,7 @@ const Navbar = ({ showLinks = true }) => {
             `}</style>
 
             <nav className='navbar'>
-                <span className='navbar__brand'>InterviewAI</span>
+                <span className='navbar__brand'>PrepAssistantAI</span>
 
 
 
