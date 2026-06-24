@@ -103,6 +103,7 @@ const Register = () => {
                                     className='auth-field__input'
                                     type="text"
                                     placeholder="johndoe"
+                                    autoComplete="new-password"
                                     onChange={(e) => setUsername(e.target.value)}
                                     required
                                 />

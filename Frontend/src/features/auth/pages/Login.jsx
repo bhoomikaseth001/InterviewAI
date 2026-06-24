@@ -106,6 +106,7 @@ const Login = () => {
                                     className='auth-field__input'
                                     type="email"
                                     placeholder="name@company.com"
+                                    autoComplete="new-password"
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
