@@ -75,7 +75,7 @@ const Login = () => {
                     </div>
                 </div>
 
-                <p className='auth-left__footer'>© 2024 InterviewAI. Elite training for high-performance roles.</p>
+                {/* <p className='auth-left__footer'>© 2024 InterviewAI. Elite training for high-performance roles.</p> */}
             </div>
 
             {/* ── Right Panel ── */}
